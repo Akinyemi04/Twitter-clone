@@ -11,6 +11,8 @@ import { useDispatch, useSelector } from 'react-redux/es/exports';
 import tweep from './images/addtweep.jpg'
 import {NavLink} from 'react-router-dom'
 import { feed } from './store';
+import { useEffect } from 'react';
+import {useNavigate} from 'react-router-dom'
 
 const Sidebar = () => {
   const homec = useSelector((value)=>{
@@ -31,6 +33,20 @@ const Sidebar = () => {
   }
   const windowx = window.location.href
   //console.log(windowx)
+
+  const navigate= useNavigate()
+  
+  // useEffect(()=>{
+  //   let authToken = sessionStorage.getItem('Auth Token')
+  //       if (authToken) {
+  //           navigate('/home')
+  //       }
+
+  //       if (!authToken) {
+  //           navigate('/')
+  //       }
+  // },[navigate])
+
   if(windowx.includes('/home')){
     dispatch(feed.homecoloring())
   }

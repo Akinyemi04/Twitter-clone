@@ -90,7 +90,6 @@ const FeedSlice = createSlice({
             }
         },
         homecoloring(state){
-            console.log('hommie')
             return{
                 ...state,
                 homecolor:'#50b7f5',

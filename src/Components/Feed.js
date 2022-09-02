@@ -24,7 +24,6 @@ const Feed = () => {
     const message = useSelector((val)=>{
         return(val.Feed.message)
     })
-    console.log(data)
     const collect = collection(store,'posts')
     useDispatch(login.full())
     useEffect(()=>{
