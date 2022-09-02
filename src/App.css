@@ -1,38 +1,706 @@
-.App {
-  text-align: center;
+.App .Sidebar {
+  width: 14.5vw;
+  height: 98vh;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  padding-top: 2vh;
+  -webkit-padding-start: 2vw;
+          padding-inline-start: 2vw;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App .Sidebar li {
+  list-style: none;
+  position: relative;
+  transition: color 0.1s ease-in;
+  cursor: pointer;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App .Sidebar li .MiSvgIcon-root {
+  padding: 0.9vh 0.5vw;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.App .Sidebar li span {
+  position: absolute;
+  margin-left: 0.6vw;
+  bottom: 1.3vh;
+}
+.App .Sidebar li button {
+  border-radius: 2vw;
+  margin-top: 2vh;
+  border: 0ch;
+  width: 12vw;
+  height: 6vh;
   color: white;
+  background-color: #50b7f5;
+}
+.App .Sidebar li button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+.App .Sidebar .side:hover {
+  border-radius: 2vw;
+  background-color: #e8f5fe;
+  color: #50b7f5;
 }
 
-.App-link {
-  color: #61dafb;
+.login {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 3vh;
+}
+.login .image {
+  width: 50vw;
+  height: 110vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 3/2;
+}
+.login main {
+  padding-left: 3vw;
+}
+.login main span .MuiSvgIcon-root {
+  width: 5vw;
+  height: 15vh;
+}
+.login main h1, .login main h3 {
+  font-weight: 700;
+  font-family: Helvetica Neue;
+  -webkit-margin-before: 0.6em;
+          margin-block-start: 0.6em;
+  -webkit-margin-after: 0em;
+          margin-block-end: 0em;
+  font-size: 6vw;
+}
+.login main h3 {
+  font-size: 2.2vw;
+  font-weight: 700;
+  font-family: inherit;
+  -webkit-margin-after: 0.5em;
+          margin-block-end: 0.5em;
+}
+.login main button {
+  position: relative;
+  display: block;
+  background-color: white;
+  border: 1px solid rgb(190, 182, 182);
+  width: 22vw;
+  border-radius: 2vw;
+  padding: 1vh 0;
+}
+.login main button span {
+  position: relative;
+  bottom: 1vh;
+}
+.login main .google {
+  position: relative;
+  margin-bottom: 2vh;
+  transition: background-color 0.1s ease-in;
+  cursor: pointer;
+}
+.login main .google img {
+  width: 3vw;
+  height: 3vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.login main .google:hover {
+  background-color: rgb(247, 249, 250);
+}
+.login main .apple {
+  transition: background-color 0.1s ease-in;
+  margin-bottom: 2vh;
+  cursor: pointer;
+}
+.login main .apple:hover {
+  background-color: rgb(192, 193, 194);
+}
+.login main .holder {
+  display: flex;
+  margin-bottom: 3vh;
+}
+.login main .holder .or {
+  margin: 0vh 10vw;
+  background-color: white;
+  width: 2vw;
+  height: 2vh;
+  z-index: 2;
+}
+.login main .holder .lhr, .login main .holder .rhr {
+  position: absolute;
+  width: 8.5vw;
+  height: 0.0001vh;
+  z-index: 1;
+  transform: translate(1vw, 1vh);
+}
+.login main .holder .rhr {
+  transform: translate(11.4vw, 1vh);
+}
+.login main .create {
+  padding: 2vh 0;
+  background-color: rgb(64, 154, 245);
+  color: white;
+  cursor: pointer;
+}
+.login main .create:hover {
+  opacity: 0.8;
+}
+.login main p {
+  font-size: small;
+}
+.login main p em {
+  color: #50b7f5;
+  font-style: normal;
+  cursor: pointer;
+}
+.login main .cool {
+  margin-top: 7vh;
+}
+.login main .cool p {
+  font-size: large;
+  font-weight: 700;
+}
+.login main .cool .signin {
+  padding: 1.5vh 0;
+  color: #50b7f5;
+  font-size: medium;
+  cursor: pointer;
+  transition: background-color 0.1s ease-in;
+}
+.login main .cool .signin:hover {
+  background-color: #e8f5fe;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.feet {
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  width: 96vw;
+  height: 10vh;
+  margin: auto;
+}
+.feet span {
+  margin-right: 1vw;
+  font-size: small;
+  color: grey;
+  cursor: pointer;
+  padding-bottom: 0.2vh;
+}
+.feet .last {
+  margin-right: 0;
+}
+.feet span:hover {
+  border-bottom: 1px solid black;
+}
+.feet .inc {
+  color: black;
+  cursor: default;
+}
+.feet .inc:hover {
+  border-bottom: none;
+}
+
+.signup {
+  position: absolute;
+  top: 0;
+  width: 98.6vw;
+  background-color: rgba(223, 230, 224, 0.2);
+  z-index: 3;
+  height: 125vh;
+  transition: display 0.4s ease-in;
+}
+.signup section {
+  width: 40vw;
+  background-color: white;
+  height: 60vh;
+  margin: 20vh auto;
+  border-radius: 2vw;
+  z-index: 2;
+  transform: display 0.7s ease-in;
+}
+.signup section span {
+  margin-left: 1vw;
+  cursor: pointer;
+}
+.signup section span:hover {
+  opacity: 0.6;
+}
+.signup section h1, .signup section .login main h3, .login main .signup section h3 {
+  font-size: 2vw;
+  padding-left: 4vw;
+}
+.signup section form {
+  display: flex;
+  width: 32vw;
+  position: relative;
+  margin: auto;
+  flex-direction: column;
+}
+.signup section form input {
+  margin-top: 2.5vh;
+  border: 1px solid grey;
+  border-radius: 0.4vw;
+  padding: 2vh;
+}
+.signup section form input:focus {
+  border: 1px solid grey;
+}
+.signup section form button {
+  margin-top: 9.2vh;
+  padding: 3vh;
+  border-radius: 3vw;
+  border: 1px solid white;
+  background-color: rgb(151, 153, 152);
+  cursor: pointer;
+}
+.signup section form p {
+  position: absolute;
+  top: 17vh;
+}
+.signup section form button:hover {
+  opacity: 0.6;
+}
+
+.widget {
+  height: 100vh;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.widget header {
+  width: 23vw;
+  margin-top: 2vh;
+  margin-left: 3vw;
+  background-color: #e8f5fe;
+  border-radius: 2vw;
+}
+.widget header .search {
+  margin-top: 2vh;
+  margin-left: 1vw;
+  font-size: medium;
+}
+.widget header input {
+  background-color: #e8f5fe;
+  transform: translate(0.7vw, -0.4vh);
+  margin-bottom: 2vh;
+  border: none;
+}
+.widget header input:focus {
+  outline: none;
+}
+.widget .ply {
+  font-size: 2vw;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0vh;
+  background-color: white;
+  font-weight: 700;
+  padding-left: 2vw;
+}
+.widget .sectionD {
+  margin-left: 1vw;
+  background-color: #e8f5fe;
+  border-radius: 2vw;
+  padding: 1vh;
+}
+
+.widget::-webkit-scrollbar {
+  display: none;
+}
+
+.feed {
+  display: flex;
+}
+.feed .flow {
+  border-bottom: 1px solid rgb(192, 193, 194);
+  padding-bottom: 2vh;
+}
+.feed .flow header {
+  display: flex;
+}
+.feed .flow header .avatar {
+  -o-object-fit: contain;
+     object-fit: contain;
+  aspect-ratio: 3/2;
+  margin-left: 2.2vw;
+  margin-top: 1vh;
+}
+.feed .flow header span {
+  margin-top: 2.3vh;
+  margin-left: 0.1vw;
+  font-size: small;
+}
+.feed .flow header .dname {
+  margin-top: 2vh;
+  margin-left: 2vw;
+  font-weight: 600;
+  font-size: medium;
+}
+.feed .flow header .verify {
+  font-size: small;
+  margin-left: 0.2vw;
+  margin-top: 3vh;
+  color: #50b7f5;
+}
+.feed .flow .pack {
+  margin-left: 8.5vw;
+  -webkit-margin-before: 0em;
+          margin-block-start: 0em;
+  -webkit-margin-after: 0em;
+          margin-block-end: 0em;
+  font-weight: 500;
+  font-size: small;
+}
+.feed .flow img {
+  width: 37vw;
+  margin-left: 7vw;
+  margin-top: 2vh;
+  border-radius: 3vw;
+  border: 1px solid grey;
+  outline: none;
+  height: 35vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 3/2;
+}
+.feed .flow footer {
+  margin-top: 2vh;
+  margin-left: 9vw;
+  cursor: pointer;
+  margin-right: 4vw;
+  display: flex;
+  justify-content: space-between;
+}
+.feed .flow footer .MuiSvgIcon-root {
+  font-size: medium;
+}
+.feed .flow footer .chat:hover {
+  color: rgb(107, 166, 227);
+}
+.feed .flow footer .retweet:hover {
+  color: rgb(107, 166, 227);
+}
+.feed .flow footer .like:hover {
+  color: rgb(212, 83, 117);
+}
+.feed .flow footer .share:hover {
+  color: rgb(126, 186, 86);
+}
+.feed main {
+  width: 48vw;
+  height: 100vh;
+  overflow: scroll;
+  margin-left: 3.5vw;
+  border-left: 1px solid rgb(199, 192, 192);
+  border-right: 1px solid rgb(170, 163, 163);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.feed main .pin {
+  z-index: 100;
+  background-color: white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding-left: 2vw;
+  padding-bottom: 3vh;
+  -webkit-margin-before: 1em;
+          margin-block-start: 1em;
+  -webkit-margin-after: 0em;
+          margin-block-end: 0em;
+  font-weight: 700;
+  border-bottom: 1px solid rgb(199, 192, 192);
+}
+.feed main .pin .MuiSvgIcon-root {
+  float: right;
+  margin-right: 1.5vw;
+  margin-left: 2vw;
+  margin-top: 0.5vh;
+  color: #50b7f5;
+}
+.feed main .tion {
+  margin-top: 2vh;
+  display: flex;
+  padding-left: 1vw;
+}
+.feed main .tion .avatarx {
+  margin-left: 2vw;
+}
+.feed main .tion input {
+  margin-left: 1vw;
+  border: none;
+}
+.feed main .tion input:focus {
+  outline: none;
+}
+.feed main .ffoot {
+  display: flex;
+  padding-bottom: 3vh;
+  border-bottom: 5px solid rgb(199, 192, 192);
+}
+.feed main .ffoot div {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 7vw;
+  margin-top: 2vh;
+  width: 12vw;
+}
+.feed main .ffoot div .MuiSvgIcon-root {
+  color: #50b7f5;
+}
+.feed main .ffoot button {
+  float: right;
+  color: white;
+  margin-left: 19vw;
+  margin-top: 1vh;
+  width: 8vw;
+  border: 1px solid white;
+  background-color: #50b7f5;
+  border-radius: 1.2vw;
+}
+.feed main .ffoot button:hover {
+  opacity: 0.7;
+}
+.feed main::-webkit-scrollbar {
+  display: none;
+}
+.feed .Sidebar {
+  width: 14.5vw;
+  height: 98vh;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  padding-top: 2vh;
+  -webkit-padding-start: 2vw;
+          padding-inline-start: 2vw;
+}
+.feed .Sidebar li {
+  list-style: none;
+  position: relative;
+  transition: color 0.1s ease-in;
+  cursor: pointer;
+}
+.feed .Sidebar li .MuiSvgIcon-root {
+  padding: 0.9vh 0.5vw;
+}
+.feed .Sidebar li span {
+  position: absolute;
+  margin-left: 0.6vw;
+  bottom: 1.3vh;
+}
+.feed .Sidebar li button {
+  border-radius: 2vw;
+  margin-top: 2vh;
+  border: 0ch;
+  width: 12vw;
+  height: 6vh;
+  color: white;
+  background-color: #50b7f5;
+}
+.feed .Sidebar li button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+.feed .Sidebar .side:hover {
+  border-radius: 2vw;
+  background-color: #e8f5fe;
+  color: #50b7f5;
+}
+
+@media screen and (max-width: 1016px) {
+  .App {
+    overflow-x: hidden;
   }
-  to {
-    transform: rotate(360deg);
+  .login {
+    flex-direction: column-reverse;
+  }
+  .login main {
+    padding-left: 30vw;
+  }
+  .login .image {
+    width: 98.2vw;
+    height: 30vh;
+    margin-top: 3vh;
+  }
+  .login main .google img {
+    height: 3vh;
+  }
+  .login main button {
+    width: 30vw;
+  }
+  .login main .create {
+    padding: 2vh 3px;
+  }
+  .login main .holder .or {
+    margin: 0 14vw;
+  }
+  .login main .holder .rhr {
+    transform: translate(16.4vw, 1vh);
+  }
+  .login main .holder .lhr, .login main .holder .rhr {
+    width: 12vw;
+  }
+  .feet {
+    height: 15vh;
+  }
+  .feet span {
+    padding-bottom: 0;
   }
 }
+@media screen and (max-width: 450px) {
+  .signup {
+    width: 99.2vw;
+    height: 150vh;
+  }
+  .signup section {
+    width: 80vw;
+    height: 50vh;
+  }
+  .signup section h1, .signup section .login main h3, .login main .signup section h3 {
+    font-size: 4vw;
+  }
+  .signup section form {
+    width: 65vw;
+  }
+  .signup section form input {
+    border-radius: 1vw;
+  }
+  .signup section form button {
+    padding: 1.7vh;
+  }
+  .login .image {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .login main {
+    padding-left: 10vw;
+  }
+  .login main span .MuiSvgIcon-root {
+    width: 10vw;
+    height: 20vh;
+  }
+  .login main h1, .login main h3 {
+    font-size: 10vw;
+    -webkit-margin-before: 0em;
+            margin-block-start: 0em;
+  }
+  .login main h3 {
+    -webkit-margin-before: 0.6em;
+            margin-block-start: 0.6em;
+    font-size: 6vw;
+  }
+  .login main button {
+    width: 70vw;
+    border-radius: 5vw;
+  }
+  .login main .google img {
+    width: 4vw;
+    height: 4vh;
+  }
+  .login main .holder .or {
+    margin: 0 33vw;
+  }
+  .login main .holder .lhr, .login main .holder .rhr {
+    width: 30vw;
+  }
+  .login main .holder .rhr {
+    width: 30vw;
+    transform: translate(37vw, 1vh);
+  }
+  .flex {
+    display: flex;
+    flex-direction: row;
+  }
+  .flex .Sidebar {
+    padding-left: 1.4vw;
+    width: 13vw;
+    height: 98vh;
+    -webkit-margin-before: 0;
+            margin-block-start: 0;
+    -webkit-margin-after: 0;
+            margin-block-end: 0;
+    padding-right: 2vw;
+    border-right: 1px solid rgb(199, 192, 192);
+    padding-top: 2vh;
+    -webkit-padding-start: 2vw;
+            padding-inline-start: 2vw;
+  }
+  .flex .Sidebar li {
+    list-style: none;
+    margin-top: 2vh;
+    margin-left: 1.3vw;
+    transition: color 0.1s ease-in;
+    cursor: pointer;
+  }
+  .flex .Sidebar li span {
+    display: none;
+  }
+  .flex .Sidebar li img {
+    width: 35px;
+    height: 35px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .flex .Sidebar .clear {
+    margin-top: 1vh;
+  }
+  .flex .Sidebar .side:hover {
+    border-radius: 2vw;
+    background-color: #e8f5fe;
+    color: #50b7f5;
+  }
+  .flex .widget {
+    width: 80vw;
+  }
+  .flex .widget header {
+    width: 75vw;
+    border-radius: 4vw;
+  }
+  .flex .widget header input {
+    font-size: 16px;
+  }
+  .flex .widget .ply {
+    font-size: medium;
+  }
+  .flex .widget .sectionD {
+    border-radius: 4vw;
+  }
+  .feed .flow img {
+    width: 70vw;
+  }
+  .feed main {
+    margin-left: 0vw;
+    width: 85vw;
+  }
+  .feed main .ffoot div {
+    margin-left: 13vw;
+  }
+  .feed main .ffoot button {
+    border-radius: 3.5vw;
+    width: 13vw;
+    margin-left: 38vw;
+  }
+  .feed main .tion input {
+    font-size: 16px;
+  }
+  .feed .Sidebar {
+    width: 13vw;
+  }
+  .feed .Sidebar li {
+    display: inline-block;
+  }
+  .feed .Sidebar li span {
+    display: none;
+  }
+  .feed .Sidebar li img {
+    width: 35px;
+    height: 35px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .feet span {
+    margin-left: 1vw;
+    margin-bottom: 1vh;
+  }
+}/*# sourceMappingURL=App.css.map */

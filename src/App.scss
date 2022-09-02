@@ -1,0 +1,715 @@
+$twiiter-color:#50b7f5;
+$bg_color:#e8f5fe;
+.App{
+
+    .Sidebar{
+        width: 14.5vw;
+        height: 98vh;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        padding-top: 2vh;
+        padding-inline-start: 2vw;
+
+        li{
+            list-style: none;
+            position: relative;
+            transition: color 0.1s ease-in;
+            cursor: pointer;
+            .MiSvgIcon-root{
+                padding:0.9vh 0.5vw;
+            }
+            span{
+                position: absolute;
+                margin-left: 0.6vw;
+                bottom: 1.3vh;
+            }
+            button{
+                border-radius: 2vw;
+                margin-top: 2vh;
+                border: 0ch;
+                width: 12vw;
+                height: 6vh;
+                color: white;
+                background-color: $twiiter-color;
+            }
+            button:hover{
+                opacity: 0.6;
+                cursor: pointer;
+            }
+        }
+        .side:hover{
+            border-radius:2vw ;
+            background-color:$bg_color ;
+            color: $twiiter-color;
+        }
+    }
+}
+.login{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3vh;
+    .image{
+        width: 50vw;
+        height: 110vh;
+        object-fit:cover;
+        aspect-ratio: 3/2;
+    }
+    main{
+        padding-left: 3vw;
+        span{
+            .MuiSvgIcon-root{
+                width: 5vw;
+                height: 15vh;
+            }
+        }
+        h1{
+            font-weight: 700;
+            font-family: Helvetica Neue;
+            margin-block-start: 0.6em;
+            margin-block-end: 0em;
+            font-size: 6vw;
+        }
+        h3{
+            @extend h1;
+            font-size: 2.2vw;
+            font-weight: 700;
+            font-family:inherit;
+            margin-block-end: 0.5em;
+        }
+        button{
+            position: relative;
+            display: block;
+            background-color: white;
+            border:1px solid rgb(190, 182, 182);
+            width: 22vw;
+            border-radius:2vw;
+            padding: 1vh 0;
+            span{
+                position: relative;
+                bottom: 1vh;
+            }
+        }
+        .google{
+            position: relative;
+            margin-bottom: 2vh;
+            transition: background-color 0.1s ease-in;
+            cursor: pointer;
+            img{
+                width: 3vw;
+                height: 3vh;
+                object-fit: contain;
+            }
+        }
+        .google:hover{
+            background-color: rgb(247, 249, 250);
+        }
+        .apple{
+            transition: background-color 0.1s ease-in;
+            margin-bottom: 2vh;
+            cursor: pointer;
+        }
+        .apple:hover{
+            background-color: rgb(192, 193, 194);
+        }
+        .holder{
+            display: flex;
+            margin-bottom: 3vh;
+            .or{
+                margin: 0vh 10vw;
+                background-color: white;
+                width: 2vw;
+                height: 2vh;
+                z-index: 2;
+            }
+            .lhr{
+                position: absolute;
+                width: 8.5vw;
+                height: 0.0001vh;
+                z-index: 1;
+                transform: translate(1vw,1vh);
+            }
+            .rhr{
+                @extend.lhr;
+                transform: translate(11.4vw,1vh);
+            }
+        }
+        .create{
+            padding: 2vh 0;
+            background-color: rgb(64, 154, 245);
+            color: white;
+            cursor: pointer;
+        }
+        .create:hover{
+            opacity: 0.8;
+        }
+        p{
+            font-size: small;
+            em{
+                color: $twiiter-color;
+                font-style: normal;
+                cursor: pointer;
+            }
+        }
+        .cool{
+            margin-top: 7vh;
+            p{
+                font-size: large;
+                font-weight: 700;
+            }
+            .signin{
+                padding: 1.5vh 0;
+                color: $twiiter-color;
+                font-size: medium;
+                cursor: pointer;
+                transition: background-color 0.1s ease-in;
+            }
+            .signin:hover{
+                background-color:$bg_color ;
+            }
+        }
+        
+    }
+}
+.feet{
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    width: 96vw;
+    height: 10vh;
+    margin: auto;
+    span{
+        margin-right: 1vw;
+        font-size:small;
+        color: grey;
+        cursor: pointer;
+        padding-bottom: 0.2vh;
+    }
+    .last{
+        margin-right: 0;
+    }
+    span:hover{
+        border-bottom: 1px solid black;
+       
+    }
+    .inc{
+        color: black;
+        cursor: default;
+    }
+    .inc:hover{
+        border-bottom: none;
+    }
+    
+}
+.signup{
+    position: absolute;
+    top: 0;
+    width: 98.6vw;
+    background-color:rgb(223, 230, 224, 0.2);
+    z-index: 3;
+    height: 125vh;
+    transition: display 0.4s ease-in;
+    section{
+        width: 40vw;
+        background-color: white;
+        height: 60vh;
+        margin: 20vh auto;
+        border-radius: 2vw ;
+        z-index: 2;
+        transform: display 0.7s ease-in;
+        span{
+            margin-left: 1vw;
+            cursor: pointer;
+        }
+        span:hover{
+            opacity: 0.6;
+        }
+        h1{
+            font-size: 2vw;
+            padding-left: 4vw;
+        }
+        form{
+            display: flex;
+            width: 32vw;
+            position: relative;
+            margin: auto;
+            flex-direction: column;
+            input{
+                margin-top: 2.5vh;
+                border: 1px solid grey;
+                border-radius: 0.4vw;
+                padding:2vh ;
+            }
+            input:focus{
+                border: 1px solid grey;
+            }
+            button{
+                margin-top: 9.2vh;
+                padding: 3vh;
+                border-radius: 3vw;
+                border: 1px solid white;
+                background-color: rgb(151, 153, 152);
+                cursor: pointer;
+            }
+            p{
+                position: absolute;
+                top: 17vh;
+            }
+            button:hover{
+                opacity: 0.6;
+            }
+        }
+    }
+}
+.widget{
+    height: 100vh;
+    overflow-y: scroll;
+    -ms-overflow-style:none;
+    scrollbar-width: none;
+    header{
+        width: 23vw;
+        margin-top: 2vh;
+        margin-left: 3vw;
+        background-color: $bg_color;
+        border-radius: 2vw;
+        .search{
+            margin-top: 2vh;
+            margin-left: 1vw;
+            font-size: medium;
+        }
+        input{
+            background-color:$bg_color;
+            transform: translate(0.7vw,-0.4vh);
+            margin-bottom:2vh ;
+            border: none;
+        }
+        input:focus{
+            outline: none;
+        }
+    }
+    .ply{
+        font-size: 2vw;
+        position: sticky;
+        top: 0vh;
+        background-color: white;
+        font-weight: 700;
+        padding-left: 2vw;
+    }
+    .sectionD{
+        margin-left: 1vw;
+        background-color: $bg_color;
+        border-radius: 2vw;
+        padding: 1vh;
+    }
+}
+.widget::-webkit-scrollbar{
+    display:none
+}
+.feed{
+    display: flex;
+    .flow{
+        border-bottom: 1px solid rgb(192, 193, 194);
+        padding-bottom: 2vh;
+        header{
+            display: flex;
+            .avatar{ 
+                object-fit:contain;
+                aspect-ratio: 3/2;
+                margin-left: 2.2vw;
+                margin-top: 1vh;
+            }
+            span{
+                margin-top: 2.3vh;
+                margin-left:0.1vw;
+                font-size: small;
+            }
+            .dname{
+                margin-top: 2vh;
+                margin-left: 2vw;
+                font-weight: 600;
+                font-size: medium;
+            }
+            .verify{
+                font-size: small;
+                margin-left: 0.2vw;
+                margin-top: 3vh;
+                color: #50b7f5;
+            }
+        }
+        .pack{
+            margin-left: 8.5vw;
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+            font-weight: 500;
+            font-size: small;
+        }
+        img{
+            width: 37vw;
+            margin-left: 7vw;
+            margin-top: 2vh;
+            border-radius: 3vw;
+            border: 1px solid grey;
+            outline: none;
+            height: 35vh;
+            object-fit:cover;
+            aspect-ratio: 3/2;
+        }
+        footer{
+            margin-top:2vh ;
+            margin-left: 9vw;
+            cursor: pointer;
+            margin-right: 4vw;
+            display: flex;
+            justify-content: space-between;
+            .MuiSvgIcon-root{
+                font-size: medium;
+            }
+            .chat:hover {
+                color:rgb(107, 166, 227)
+            }
+            .retweet:hover {
+                color:rgb(107, 166, 227)
+            }
+            .like:hover{
+                color:rgb(212, 83, 117)
+            }
+            .share:hover{
+                color:rgb(126, 186, 86)
+            }
+        }
+    }
+    main{
+        width: 48vw;
+        height: 100vh;
+        overflow: scroll;
+        margin-left: 3.5vw;
+        border-left:1px solid rgb(199, 192, 192) ;
+        border-right:1px solid rgb(170, 163, 163) ;
+        -ms-overflow-style:none;
+        scrollbar-width: none;
+        .pin{
+            z-index: 100;
+            background-color: white;
+            position: sticky;
+            top: 0;
+            padding-left: 2vw;
+            padding-bottom: 3vh;
+            margin-block-start: 1em;
+            margin-block-end: 0em;
+            font-weight: 700;
+            border-bottom: 1px solid rgb(199, 192, 192) ;
+            .MuiSvgIcon-root{
+                float: right;
+                margin-right: 1.5vw;
+                margin-left: 2vw;
+                margin-top: 0.5vh;
+                color: $twiiter-color;
+            }
+        }
+        .tion{
+            margin-top: 2vh;
+            display: flex;
+            padding-left: 1vw;
+           .avatarx{
+            margin-left: 2vw;
+           }
+            input{
+                margin-left: 1vw;
+                border: none;
+            }
+            input:focus{
+                outline: none;
+            }
+        }
+        .ffoot{
+            display: flex;
+            padding-bottom: 3vh;
+            border-bottom: 5px solid  rgb(199, 192, 192);
+            div{
+                display: flex;
+                justify-content: space-between;
+                margin-left: 7vw;
+                margin-top: 2vh;
+                width: 12vw;
+                .MuiSvgIcon-root{
+                    color: $twiiter-color;
+                }
+                
+            }
+            button{
+                float: right;
+                color: white;
+                margin-left: 19vw;
+                margin-top: 1vh;
+                width: 8vw;
+                border: 1px solid white;
+                background-color:$twiiter-color;
+                border-radius: 1.2vw;
+            }
+            button:hover{
+                opacity: 0.7;
+            }
+        }
+    }
+    main::-webkit-scrollbar{
+        display:none
+    }
+    .Sidebar{
+        width: 14.5vw;
+        height: 98vh;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        padding-top: 2vh;
+        padding-inline-start: 2vw;
+
+        li{
+            list-style: none;
+            position: relative;
+            transition: color 0.1s ease-in;
+            cursor: pointer;
+            .MuiSvgIcon-root{
+                padding:0.9vh 0.5vw;
+            }
+            span{
+                position: absolute;
+                margin-left: 0.6vw;
+                bottom: 1.3vh;
+            }
+            button{
+                border-radius: 2vw;
+                margin-top: 2vh;
+                border: 0ch;
+                width: 12vw;
+                height: 6vh;
+                color: white;
+                background-color: $twiiter-color;
+            }
+            button:hover{
+                opacity: 0.6;
+                cursor: pointer;
+            }
+        }
+        .side:hover{
+            border-radius:2vw ;
+            background-color:$bg_color ;
+            color: $twiiter-color;
+        }
+    }
+
+}
+
+@media screen and(max-width:'1016px') {
+    .App{
+        overflow-x: hidden;
+    }
+    .login{
+        flex-direction: column-reverse;
+        main{
+            padding-left: 30vw;
+        }
+        .image{
+            width: 98.2vw;
+            height: 30vh;
+            margin-top: 3vh;
+        }
+        main{
+            .google{
+                img{
+                    height:3vh ;
+                }
+            }
+            button{
+                width: 30vw;
+            }
+            .create{
+                padding: 2vh 3px;
+                
+            }
+            .holder{
+                .or{
+                    margin: 0 14vw;
+                }
+                .rhr{
+                    transform: translate(16.4vw,1vh);
+                }
+                .lhr{
+                    width: 12vw;
+                }
+            }
+        }
+    }
+    .feet{
+        height: 15vh;
+        span{
+            padding-bottom: 0;
+        }
+    }
+}
+@media screen and (max-width:'450px') {
+    .signup{
+        width:99.2vw;
+        height:150vh ;
+        section{
+            width: 80vw;
+            height: 50vh;
+            h1{
+                font-size: 4vw;
+            }
+            form{
+                width: 65vw;
+                input{
+                    border-radius: 1vw;
+                }
+                button{
+                    padding: 1.7vh;
+                }
+            }
+        }
+    }
+    .login{
+        .image{
+            object-fit:cover;
+        }
+        main{
+            padding-left: 10vw;
+            span{
+                .MuiSvgIcon-root{
+                    width: 10vw;
+                    height: 20vh;
+                }
+            }
+            h1{
+                font-size: 10vw;
+                margin-block-start: 0em;
+            }
+            h3{
+                margin-block-start: 0.6em;
+                font-size: 6vw;
+            }
+            button{
+                width: 70vw;
+                border-radius: 5vw;
+            }
+            .google{
+                img{
+                    width: 4vw;
+                    height: 4vh;
+                }
+            }
+            .holder{
+                .or{
+                    margin: 0 33vw;
+                }
+                .lhr{
+                    width: 30vw;
+                }
+                .rhr{
+                    width: 30vw;
+                    transform: translate(37vw,1vh);
+                }
+            }
+        }
+    }   
+    .flex{
+        display: flex;
+        flex-direction: row;
+        .Sidebar{
+            padding-left: 1.4vw;
+            width: 13vw;
+            height: 98vh;
+            margin-block-start:0 ;
+            margin-block-end: 0;
+            padding-right: 2vw;
+            border-right: 1px solid rgb(199, 192, 192);
+            padding-top: 2vh;
+            padding-inline-start: 2vw;
+            li{
+                list-style:none;
+                margin-top: 2vh;
+                margin-left: 1.3vw;
+                transition: color 0.1s ease-in;
+                cursor: pointer;
+                span{
+                    display: none;
+                }
+                img{
+                    width: 35px;
+                    height: 35px;
+                    object-fit: contain;
+                }
+            }
+            .clear{
+                margin-top: 1vh;
+            }
+            .side:hover{
+                border-radius:2vw ;
+                background-color:$bg_color ;
+                color: $twiiter-color;
+            }
+        }
+        .widget{
+            width: 80vw;
+            header{
+                width: 75vw;
+                border-radius: 4vw;
+                input{
+                    font-size: 16px;
+                }
+            }
+            .ply{
+                font-size: medium;
+            }
+            .sectionD{
+                border-radius: 4vw;
+            }
+        }
+    } 
+    .feed{
+        
+        .flow{
+            img{
+                width: 70vw;
+            }
+        }
+        main{
+            margin-left: 0vw;
+            width: 85vw;
+            .ffoot{
+                div{
+                    margin-left: 13vw;
+                }
+                button{
+                    border-radius: 3.5vw;
+                    width: 13vw;
+                    margin-left: 38vw;
+                }
+            }
+            .tion{
+                input{
+                    font-size: 16px;
+                }
+            }
+        }
+        .Sidebar{
+            width: 13vw;
+            li{
+                display: inline-block;
+                span{
+                    display: none;
+                }
+                img{
+                    width:35px;
+                    height:35px ;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+    .feet{
+        span{
+            margin-left: 1vw;
+            margin-bottom: 1vh;
+        }
+    }
+}
