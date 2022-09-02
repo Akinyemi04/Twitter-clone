@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Routes,Route } from 'react-router-dom';
+import {  Routes,Route } from 'react-router-dom';
 // import { useDispatch,useSelector } from 'react-redux';
 // import { login } from './Components/store';
 import Feed from './Components/Feed';
@@ -10,11 +10,9 @@ import { useEffect } from 'react';
 import {useNavigate} from 'react-router-dom'
 
 function App() {
-  // const data = useSelector((value)=>{
-  //   return(value.Login.display)
-  // })
+  
   const navigate= useNavigate()
-  //let authToken = sessionStorage.getItem('Auth Token')
+ 
   useEffect(()=>{
     let authToken = sessionStorage.getItem('Auth Token')
         if (authToken) {
@@ -24,12 +22,11 @@ function App() {
         if (!authToken) {
             navigate('/')
         }
-  },[])
+  },[navigate])
   const width = window.screen.width
   return (
     <>
       <div className="App">
-        {/* <Sidebar/> */}
       </div>
       <Routes>
         <Route exact path='/' element={<Login/>}></Route>

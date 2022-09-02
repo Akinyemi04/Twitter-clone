@@ -1,5 +1,5 @@
 import { login } from './store';
-import { useDispatch,useSelector } from 'react-redux';
+import { useDispatch,} from 'react-redux';
 import  mobile from './images/mobile.png'
 import tablet from './images/tablet.png'
 import laptop from './images/laptop.png'
@@ -27,7 +27,7 @@ const Login = () => {
         if (!authToken) {
             navigate('/')
         }
-    },[])
+    },[navigate])
     function create(){
         dispatch(login.Information('Create Your Account'))
         dispatch(login.display())

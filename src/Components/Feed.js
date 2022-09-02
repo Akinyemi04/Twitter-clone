@@ -34,7 +34,7 @@ const Feed = () => {
                 return item.data()
               }))))
           })
-    },[dispatch])
+    },[dispatch,collect])
     function sendTweet(e){
         addDoc(collect,{
             text:message,
