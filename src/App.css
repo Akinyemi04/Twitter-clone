@@ -652,6 +652,9 @@
   }
   .flex .widget {
     width: 80vw;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
   .flex .widget header {
     width: 75vw;
@@ -665,6 +668,9 @@
   }
   .flex .widget .sectionD {
     border-radius: 4vw;
+  }
+  .flex .widget::-webkit-scrollbar {
+    display: none;
   }
   .feed .flow img {
     width: 70vw;

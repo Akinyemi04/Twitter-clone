@@ -650,6 +650,9 @@ $bg_color:#e8f5fe;
         }
         .widget{
             width: 80vw;
+            overflow-y:scroll ;
+            -ms-overflow-style:none;
+            scrollbar-width: none;
             header{
                 width: 75vw;
                 border-radius: 4vw;
@@ -663,6 +666,9 @@ $bg_color:#e8f5fe;
             .sectionD{
                 border-radius: 4vw;
             }
+        }
+        .widget::-webkit-scrollbar{
+            display:none
         }
     } 
     .feed{
