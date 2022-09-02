@@ -1,7 +1,5 @@
 import './App.css';
-import {  Routes,Route } from 'react-router-dom';
-// import { useDispatch,useSelector } from 'react-redux';
-// import { login } from './Components/store';
+import {Routes,Route } from 'react-router-dom';
 import Feed from './Components/Feed';
 import Login from './Components/Login';
 import {app} from './Components/FbConfig';
@@ -12,7 +10,7 @@ import {useNavigate} from 'react-router-dom'
 function App() {
   
   const navigate= useNavigate()
- 
+  
   useEffect(()=>{
     let authToken = sessionStorage.getItem('Auth Token')
         if (authToken) {
