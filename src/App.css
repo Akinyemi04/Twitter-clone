@@ -714,6 +714,7 @@
     width: 70vw;
     -o-object-fit: cover;
        object-fit: cover;
+    height: 35vh;
     aspect-ratio: 3/2;
   }
   .feed main {
