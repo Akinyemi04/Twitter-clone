@@ -88,6 +88,7 @@ const Feed = () => {
             })}
         </main>
         {width > 440 &&<Widget/>}
+        <div className='animate'>{data.length === 0 && <aside className='loader'></aside>}</div>
     </div>
   )
 }

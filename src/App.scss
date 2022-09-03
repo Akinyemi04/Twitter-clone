@@ -308,6 +308,29 @@ $bg_color:#e8f5fe;
 }
 .feed{
     display: flex;
+    .animate{
+        position: absolute;
+        left: 40vw;
+        top: 30vh;
+        .loader{
+            border: 8px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 8px solid $twiiter-color;
+            width: 30px;
+            height: 30px;
+            -webkit-animation: spin 2s linear infinite; /* Safari */
+            animation: spin 2s linear infinite;
+        }
+        @-webkit-keyframes spin {
+            0% { -webkit-transform: rotate(0deg); }
+            100% { -webkit-transform: rotate(360deg); }
+          }
+          
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+    }
     .flow{
         border-bottom: 1px solid rgb(192, 193, 194);
         padding-bottom: 2vh;
@@ -351,7 +374,7 @@ $bg_color:#e8f5fe;
             border-radius: 3vw;
             border: 1px solid grey;
             outline: none;
-            height: 35vh;
+            height: 47vh;
             object-fit:cover;
             aspect-ratio: 3/2;
         }
@@ -650,6 +673,7 @@ $bg_color:#e8f5fe;
         }
         .widget{
             width: 80vw;
+            height: 100vh;
             overflow-y:scroll ;
             -ms-overflow-style:none;
             scrollbar-width: none;
@@ -672,10 +696,19 @@ $bg_color:#e8f5fe;
         }
     } 
     .feed{
+        .animate{
+            left: 45vw;
+            .loader{
+                width: 20px;
+                height:20px;
+            }
+        }
         
         .flow{
             img{
                 width: 70vw;
+                object-fit:cover;
+                aspect-ratio: 3/2;
             }
         }
         main{
