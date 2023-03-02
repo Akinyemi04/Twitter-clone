@@ -55,7 +55,92 @@
   aspect-ratio: 3/2;
 }
 .login main {
+  position: relative;
   padding-left: 3vw;
+}
+.login main .siding {
+  position: absolute;
+  left: 12vw;
+  bottom: 16vh;
+}
+.login main .siding .lds-spinner {
+  color: official;
+  display: inline-block;
+  position: relative;
+  bottom: 20px;
+  width: 80px;
+  height: 80px;
+}
+.login main .siding .lds-spinner div {
+  transform-origin: 40px 40px;
+  animation: lds-spinner 1.2s linear infinite;
+}
+.login main .siding .lds-spinner div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 37px;
+  width: 4px;
+  height: 12px;
+  border-radius: 20%;
+  background: #50b7f5;
+}
+.login main .siding .lds-spinner div:nth-child(1) {
+  transform: rotate(0deg);
+  animation-delay: -1.1s;
+}
+.login main .siding .lds-spinner div:nth-child(2) {
+  transform: rotate(30deg);
+  animation-delay: -1s;
+}
+.login main .siding .lds-spinner div:nth-child(3) {
+  transform: rotate(60deg);
+  animation-delay: -0.9s;
+}
+.login main .siding .lds-spinner div:nth-child(4) {
+  transform: rotate(90deg);
+  animation-delay: -0.8s;
+}
+.login main .siding .lds-spinner div:nth-child(5) {
+  transform: rotate(120deg);
+  animation-delay: -0.7s;
+}
+.login main .siding .lds-spinner div:nth-child(6) {
+  transform: rotate(150deg);
+  animation-delay: -0.6s;
+}
+.login main .siding .lds-spinner div:nth-child(7) {
+  transform: rotate(180deg);
+  animation-delay: -0.5s;
+}
+.login main .siding .lds-spinner div:nth-child(8) {
+  transform: rotate(210deg);
+  animation-delay: -0.4s;
+}
+.login main .siding .lds-spinner div:nth-child(9) {
+  transform: rotate(240deg);
+  animation-delay: -0.3s;
+}
+.login main .siding .lds-spinner div:nth-child(10) {
+  transform: rotate(270deg);
+  animation-delay: -0.2s;
+}
+.login main .siding .lds-spinner div:nth-child(11) {
+  transform: rotate(300deg);
+  animation-delay: -0.1s;
+}
+.login main .siding .lds-spinner div:nth-child(12) {
+  transform: rotate(330deg);
+  animation-delay: 0s;
+}
+@keyframes lds-spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 .login main span .MuiSvgIcon-root {
   width: 5vw;
@@ -220,6 +305,8 @@
 }
 .signup section span {
   margin-left: 1vw;
+  position: relative;
+  top: 1.4vh;
   cursor: pointer;
 }
 .signup section span:hover {
@@ -290,7 +377,6 @@
 }
 .widget .ply {
   font-size: 2vw;
-  position: -webkit-sticky;
   position: sticky;
   top: 0vh;
   background-color: white;
@@ -321,17 +407,8 @@
   border-radius: 50%;
   border-top: 8px solid #50b7f5;
   width: 30px;
-  height: 30px;
-  -webkit-animation: spin 2s linear infinite; /* Safari */
+  height: 30px; /* Safari */
   animation: spin 2s linear infinite;
-}
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
 }
 @keyframes spin {
   0% {
@@ -429,7 +506,6 @@
 .feed main .pin {
   z-index: 100;
   background-color: white;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   padding-left: 2vw;
@@ -548,6 +624,13 @@
   .login main {
     padding-left: 30vw;
   }
+  .login main .lds-spinner {
+    transform: translateY(23px);
+  }
+  .login main .siding {
+    bottom: 10vh;
+    left: 40vw;
+  }
   .login .image {
     width: 98.2vw;
     height: 30vh;
@@ -605,6 +688,9 @@
   }
   .login main {
     padding-left: 10vw;
+  }
+  .login main .lds-spinner {
+    transform: translate(-8vw, 21px);
   }
   .login main span .MuiSvgIcon-root {
     width: 10vw;

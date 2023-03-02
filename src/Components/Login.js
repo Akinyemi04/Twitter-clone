@@ -1,5 +1,5 @@
 import { login } from './store';
-import { useDispatch,} from 'react-redux';
+import { useDispatch, useSelector,} from 'react-redux';
 import  mobile from './images/mobile.png'
 import tablet from './images/tablet.png'
 import laptop from './images/laptop.png'
@@ -8,6 +8,7 @@ import AppleIcon from '@mui/icons-material/Apple';
 import google from './images/google.png'
 import { getAuth, GoogleAuthProvider,signInWithPopup,OAuthProvider } from 'firebase/auth'
 import {useNavigate} from 'react-router-dom'
+//import { login } from './store';
 import { useEffect } from 'react';
 import SignUp from './SignUp';
 
@@ -18,10 +19,13 @@ const Login = () => {
     const auth = getAuth()
     const googleprovider = new GoogleAuthProvider()
     const provider = new OAuthProvider('apple.com');
+    const condition = useSelector((val)=>{
+        return(val.Login.condition)
+    })
     useEffect(()=>{
         let authToken = sessionStorage.getItem('Auth Token')
         if (authToken) {
-            navigate('/home')
+            navigate('/home') 
         }
 
         if (!authToken) {
@@ -31,29 +35,36 @@ const Login = () => {
     function create(){
         dispatch(login.Information('Create Your Account'))
         dispatch(login.display())
+        
     }
     function  Signing(){
         dispatch(login.Information('Sign In'))
         dispatch(login.display())
     }
     function Googlei(){
+        dispatch(login.change())
         signInWithPopup(auth,googleprovider)
         .then((res)=>{
             navigate('/home')
             sessionStorage.setItem('Auth Token', res._tokenResponse.refreshToken)
+            dispatch(login.fix())
         })
         .catch((err)=>{
             dispatch(login.fixerror(err.message))
+            dispatch(login.fix())
         })
     }
     function Apple(){
+        dispatch(login.change())
         signInWithPopup(auth,provider)
         .then((res)=>{
             navigate('/home')
             sessionStorage.setItem('Auth Token', res._tokenResponse.refreshToken)
+            dispatch(login.fix())
         })
         .catch((err)=>{
             dispatch(login.fixerror(err.message))
+            dispatch(login.fix())
         })
     }
   return (
@@ -75,7 +86,7 @@ const Login = () => {
                 <span className='or'>or</span>
                 <hr className='rhr'/>
                 </div>
-                
+                <span className='siding'>{condition !== null && <div className="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>}</span>
                 <button className='create' onClick={create}>Create account with phone or email</button>
                 <p>By signing up, you agree to the <em>Terms of Service</em> and<em> Privacy<br/> Policy,</em> including <em>Cookie Use.</em></p>
                 <article className='cool'>

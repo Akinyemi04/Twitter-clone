@@ -28,35 +28,50 @@ const SignUp = () => {
         return(val.Login.info)
     })
     function Submit(e){
+        dispatch(login.change())
         e.preventDefault()
         if (info ==='Create Your Account'){
             createUserWithEmailAndPassword(auth,email,password)
             .then((res)=>{
                 navigate('/home')
                 sessionStorage.setItem('Auth Token', res._tokenResponse.refreshToken)
+                dispatch(login.fix())
             })
             .catch((err)=>{
                 if(err.code ==='auth/weak-password' ){
                     dispatch(login.fixerror('Weak Password:Password should be at least 6 characters '))
+                    dispatch(login.fix())
                 }
                 else if(error.code === 'auth/email-already-in-use'){
                     dispatch(login.fixerror('User Exists Please LogIN Instead'))
+                    dispatch(login.fix())
+                }
+                else{
+                    dispatch(login.fix())
+                    
                 }
             })
         
         }
         else{
+            dispatch(login.change())
             signInWithEmailAndPassword(auth,email,password)
             .then((res)=>{
                 navigate('/home')
                 sessionStorage.setItem('Auth Token', res._tokenResponse.refreshToken)
+                dispatch(login.fix())
             })
             .catch((error)=>{
                  if(error.code === 'auth/wrong-password'){
                     dispatch(login.fixerror('Incorrect Password'))
+                    dispatch(login.fix())
                 }
                 else if (error.code === 'auth/user-not-found'){
                     dispatch(login.fixerror('Please Check Your Email/Password'))
+                    dispatch(login.fix())
+                }
+                else{
+                    dispatch(login.fix())
                 }
             })
         }

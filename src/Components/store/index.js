@@ -8,6 +8,7 @@ const LoginSlice=createSlice({
         password:null,
         signupDisplay:'none',
         error: null,
+        condition:null,
         info:null
     },
     reducers:{
@@ -57,6 +58,18 @@ const LoginSlice=createSlice({
             return{
                 ...state,
                 info:action.payload
+            }
+        },
+        change(state){
+            return{
+                ...state,
+                condition:'abc'
+            }
+        },
+        fix(state){
+            return{
+                ...state,
+                condition:null
             }
         }
     }
